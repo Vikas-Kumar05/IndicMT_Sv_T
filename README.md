@@ -75,10 +75,4 @@ run_seed_sweep.py / sweep_runner.py   # multi-seed sweep tooling
 outputs/, checkpoints/     # generated at runtime, per-language
 ```
 
-## Notes
 
-- Augmented data is direction-balanced (`eng2tgt`/`tgt2eng`) to avoid biasing the model toward one direction.
-- Fine-tuning uses prompt-masked loss (loss computed on target tokens only).
-- Each augmentation technique is quality-filtered via LaBSE and/or chrF++ before being mixed into training.
-- LoRA rank/config is sized per language based on corpus size.
-- COMET (`wmt22-comet-da`) wasn't trained on these languages — used here only for relative ranking between our own systems, not as an absolute quality measure.
