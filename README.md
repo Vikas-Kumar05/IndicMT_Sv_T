@@ -16,10 +16,10 @@ Baseline (zero-shot) → R1 (LoRA fine-tune) → Exp-1..6 (augmentation ablation
 | 2 | Zero-shot baseline eval |
 | 3 | R1: LoRA/DoRA fine-tuning |
 | 4 | Evaluate R1 vs baseline |
-| 5a–5f | Exp-1..6: BT, +FT, +Iterative retrain, +Noise, +Subword reg, +Eng paraphrase |
-| 5g | Exp-7: decode-time hallucination mitigation (rep-penalty, LaBSE-reranked beam) |
+| 5a–5e | Exp-1: BT, Exp-2: BT+FT, Exp-3:BT+FT+Iterative retrain, Exp-5:BT+FT+Iterative+Subword reg |
+| 5g | Exp-7: decode-time mitigation (rep-penalty, LaBSE-reranked beam) and hallucination analysis |
 | 8 | Final comparison across all systems |
-| 9 | Multi-seed significance testing (optional, see below) |
+| 9 | significance testing (optional, see below) |
 | 10 | Cross-language results dashboard |
 
 Metrics: BLEU, chrF, chrF++, TER, COMET, plus a rule-based hallucination check (omission/repetition/copy-source).
